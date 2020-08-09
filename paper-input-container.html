@@ -224,6 +224,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
         @apply --layout-flex-auto;
         @apply --layout-relative;
         max-width: 100%;
+        display:inline-block;
       }
 
       .input-content ::slotted(label),
@@ -317,7 +318,6 @@ This element is `display:block` by default, but you can set the `inline` attribu
       }
 
       .prefix ::slotted(*) {
-        display: inline-block;
         @apply --paper-font-subhead;
         @apply --layout-flex-none;
         @apply --paper-input-prefix;
@@ -356,12 +356,15 @@ This element is `display:block` by default, but you can set the `inline` attribu
     <div class="floated-label-placeholder" aria-hidden="true" hidden="[[noLabelFloat]]">&nbsp;</div>
 
     <div class="input-wrapper">
-      <span class="prefix"><slot name="prefix"></slot></span>
-
-      <div class$="[[_computeInputContentClass(noLabelFloat,alwaysFloatLabel,focused,invalid,_inputHasContent)]]" id="labelAndInputContainer">
+      <span class="prefix">
+        <slot name="prefix"></slot>
+        <div class$="[[_computeInputContentClass(noLabelFloat,alwaysFloatLabel,focused,invalid,_inputHasContent)]]" id="labelAndInputContainer">
         <slot name="label"></slot>
         <slot name="input"></slot>
       </div>
+        </span>
+
+      
 
       <span class="suffix"><slot name="suffix"></slot></span>
     </div>
