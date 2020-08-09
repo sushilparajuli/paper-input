@@ -11,15 +11,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-styles/default-theme.html">
 <link rel="import" href="../paper-styles/typography.html">
-<link rel="import" href="paper-input-addon-behavior.html">
+<link rel="import" href="paper-input-custom-addon-behavior.html">
 
 <!--
-`<paper-input-error>` is an error message for use with `<paper-input-container>`. The error is
+`<paper-input-custom-error>` is an error message for use with `<paper-input-container>`. The error is
 displayed when the `<paper-input-container>` is `invalid`.
 
     <paper-input-container>
       <input pattern="[0-9]*">
-      <paper-input-error slot="add-on">Only numbers are allowed!</paper-input-error>
+      <paper-input-custom-error slot="add-on">Only numbers are allowed!</paper-input-custom-error>
     </paper-input-container>
 
 ### Styling
@@ -29,10 +29,10 @@ The following custom properties and mixins are available for styling:
 Custom property | Description | Default
 ----------------|-------------|----------
 `--paper-input-container-invalid-color` | The foreground color of the error | `--error-color`
-`--paper-input-error`                   | Mixin applied to the error        | `{}`
+`--paper-input-custom-error`                   | Mixin applied to the error        | `{}`
 -->
 
-<dom-module id="paper-input-error">
+<dom-module id="paper-input-custom-error">
   <template>
     <style>
       :host {
@@ -59,10 +59,10 @@ Custom property | Description | Default
 
 <script>
   Polymer({
-    is: 'paper-input-error',
+    is: 'paper-input-custom-error',
 
     behaviors: [
-      Polymer.PaperInputAddonBehavior
+      Polymer.PaperInputCustomAddonBehavior
     ],
 
     properties: {

@@ -10,7 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../paper-styles/typography.html">
-<link rel="import" href="paper-input-addon-behavior.html">
+<link rel="import" href="paper-input-custom-addon-behavior.html">
 
 <!--
 `<paper-input-char-counter>` is a character counter for use with `<paper-input-container>`. It
@@ -30,7 +30,7 @@ Custom property | Description | Default
 `--paper-input-char-counter` | Mixin applied to the element | `{}`
 -->
 
-<dom-module id="paper-input-char-counter">
+<dom-module id="paper-input-custom-char-counter">
   <template>
     <style>
       :host {
@@ -57,10 +57,10 @@ Custom property | Description | Default
 
 <script>
   Polymer({
-    is: 'paper-input-char-counter',
+    is: 'paper-input-custom-char-counter',
 
     behaviors: [
-      Polymer.PaperInputAddonBehavior
+      Polymer.PaperInputCustomAddonBehavior
     ],
 
     properties: {
