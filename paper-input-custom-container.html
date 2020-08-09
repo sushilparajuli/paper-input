@@ -233,7 +233,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
         top: 0;
         right: 0;
         left: 0;
-        width: 100%;
+        width: max-content;
         font: inherit;
         color: var(--paper-input-container-color, var(--secondary-text-color));
         -webkit-transition: -webkit-transform 0.25s, width 0.25s;
@@ -243,7 +243,7 @@ This element is `display:block` by default, but you can set the `inline` attribu
         /* Fix for safari not focusing 0-height date/time inputs with -webkit-apperance: none; */
         min-height: 1px;
 
-        @apply --paper-font-common-nowrap;
+        /* @apply --paper-font-common-nowrap; */
         @apply --paper-font-subhead;
         @apply --paper-input-container-label;
         @apply --paper-transition-easing;
